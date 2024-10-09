@@ -9,7 +9,6 @@ This guide will help you set up the environment and run the schema for the exter
 - Docker
 - Docker Compose
 - PostgreSQL
-- RabbitMQ
 
 ### Step 1: Clone the Repository
 
