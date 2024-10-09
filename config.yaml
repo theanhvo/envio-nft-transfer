@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: NOASSERTION
+#
+# SPDX-FileType: SOURCE
+#
+# SPDX-FileCopyrightText: 2024 Johannes Krauser III <detroitmetalcrypto@gmail.com>
+#
+# SPDX-FileContributor: Johannes Krauser III <detroitmetalcrypto@gmail.com>
+
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: torchbearer
+field_selection:
+  transaction_fields:
+    - "hash"
+    - "from"
+    - "transactionIndex"
+    - "input"
+networks:
+  - id: 80084
+    hypersync_config:
+      url: https://berachain-bartio.hypersync.xyz
+    start_block: 86800
+    end_block: null
+    contracts:
+      - name: ERC721
+        handler: ./src/contracts/erc721/handlers.ts
+        abi_file_path: ./abi/erc721.json
+        events:
+          - event: Transfer

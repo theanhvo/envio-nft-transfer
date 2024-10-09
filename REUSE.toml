@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: CC0-1.0
+#
+# SPDX-FileType: SOURCE
+#
+# SPDX-FileCopyrightText: 2024 Johannes Krauser III <detroitmetalcrypto@gmail.com>
+# 
+# SPDX-FileContributor: Johannes Krauser III <detroitmetalcrypto@gmail.com>
+
+version = 1
+SPDX-PackageName = "torchbearer"
+SPDX-PackageSupplier = "Beramarket <hello@beramarket.xyz>"
+SPDX-PackageDownloadLocation = "https://github.com/beramarket/torchbearer"
+
+[[annotations]]
+path = [
+    "abi/**/*.json",
+    ".vscode/extensions.json",
+    ".vscode/settings.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.json",
+    "README.md",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Johannes Krauser III <detroitmetalcrypto@gmail.com>"
+SPDX-License-Identifier = "NOASSERTION"
+
+[[annotations]]
+path = ["abi/seaport-1.6.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (c) 2023 Ozone Networks, Inc."
+SPDX-License-Identifier = "MIT"

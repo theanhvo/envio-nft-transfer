@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: NOASSERTION
+#
+# SPDX-FileType: SOURCE
+#
+# SPDX-FileCopyrightText: 2024 Johannes Krauser III <detroitmetalcrypto@gmail.com>
+#
+# SPDX-FileContributor: Johannes Krauser III <detroitmetalcrypto@gmail.com>
+
+packages:
+  - ./*

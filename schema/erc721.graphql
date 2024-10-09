@@ -1,0 +1,15 @@
+type NftTransfers {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  from_address: String!
+  to_address: String!
+  caller_address: String!
+  token_id: String!
+  quantity: BigInt!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+}
