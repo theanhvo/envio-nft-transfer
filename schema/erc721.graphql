@@ -8,7 +8,7 @@ type NftTransfers {
   from_address: String!
   to_address: String!
   caller_address: String!
-  token_id: String!
+  token_id: BigInt!
   quantity: BigInt!
   created_at: Timestamp!
   updated_at: Timestamp!

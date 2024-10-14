@@ -24,7 +24,7 @@ type NftTransfers = {
   from_address: string
   to_address: string
   caller_address: string
-  token_id: string
+  token_id: bigint
   quantity: bigint
   created_at_id: string
   updated_at_id: string
@@ -40,7 +40,7 @@ export const INITIAL_NFT_TRANSFERS: NftTransfers = {
   from_address: "",
   to_address: "",
   caller_address: "",
-  token_id: "",
+  token_id: 0n,
   quantity: 0n,
   created_at_id: "",
   updated_at_id: "",
