@@ -43,7 +43,14 @@ TUI_OFF="true"
 
 ### Step 3: Run the Schema
 
-To set up the database schema, run the `schema.sql` file against your PostgreSQL database. You can do this using the `psql` command-line tool or any PostgreSQL client.
+To set up the database schema, run the following SQL files against your PostgreSQL database:
+- `schema.sql`
+- `db/contract_type.sql`
+- `db/creator-flow.sql`
+- `db/ERC721.sql`
+- `db/launchpad.sql`
+
+You can do this using the `psql` command-line tool or any PostgreSQL client.
 
 #### Using `psql` Command-Line Tool
 
