@@ -63,6 +63,7 @@ This command connects to the PostgreSQL database with the specified credentials,
 ### Step 4: Start the Application
 
 ```bash
+yarn install
 yarn codegen
-yarn dev
+yarn start
 ```

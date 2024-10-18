@@ -22,11 +22,6 @@ networks:
     start_block: 4262919
     end_block: null
     contracts:
-      - name: Treasury
-        handler: ./src/contracts/treasury/handlers.ts
-        abi_file_path: ./abi/treasury.json
-        events:
-          - event: RFVChanged
       - name: ERC721
         handler: ./src/contracts/erc721/handlers.ts
         abi_file_path: ./abi/erc721.json
