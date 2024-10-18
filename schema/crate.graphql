@@ -1,0 +1,208 @@
+type ContractCreated {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  name: String!
+  symbol: String!
+}
+
+type SupplyUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  supply: Int!
+}
+
+type PriceUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  price: String!
+}
+
+type RoyaltiesUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  token_id: Int!
+  receiver: String!
+  bps: Int!
+}
+
+type OwnershipTransferred {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  old_owner: String!
+  new_owner: String!
+}
+
+type ListMinted {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  minter: String!
+  list_id: Int!
+  amount: Int!
+}
+
+type MintListUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  list_id: Int!
+  list: [String!]
+}
+
+type MintListDeleted {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  list_id: Int!
+}
+
+type TreasuryUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  min_allocation: Int!
+  max_allocation: Int!
+}
+
+type FeeUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  fee_recipients: [String!]!
+  fees: [Int!]!
+}
+
+type ReferralFeeUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  referral_fee: String!
+}
+
+type Referral {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  referral: String!
+  referred: String!
+  value: String!
+}
+
+type Paused {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  account: String!
+}
+
+type Unpaused {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  account: String!
+}
+
+type CrateTransfer {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  from_address: String!
+  to_address: String!
+  caller_address: String!
+  token_id: BigInt!
+  quantity: BigInt!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+}

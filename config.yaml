@@ -7,6 +7,7 @@
 # SPDX-FileContributor: Johannes Krauser III <detroitmetalcrypto@gmail.com>
 
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+
 name: torchbearer
 field_selection:
   transaction_fields:
@@ -18,11 +19,46 @@ networks:
   - id: 80084
     hypersync_config:
       url: https://berachain-bartio.hypersync.xyz
-    start_block: 86800
+    start_block: 4262919
     end_block: null
     contracts:
+      - name: Treasury
+        handler: ./src/contracts/treasury/handlers.ts
+        abi_file_path: ./abi/treasury.json
+        events:
+          - event: RFVChanged
       - name: ERC721
         handler: ./src/contracts/erc721/handlers.ts
         abi_file_path: ./abi/erc721.json
         events:
           - event: Transfer
+      - name: Launchpad_0_0_2
+        address: "0x0a6AdB3F57A487163b708B25713AaC1ccEcaBD7D"
+        handler: ./src/contracts/launchpad/handlers.ts
+        abi_file_path: ./abi/launchpad-0.0.2.json
+        events:
+          - event: CollectionCreated
+          - event: TreasuryCreated
+          - event: SplitterCreated
+          - event: NftPolicyUpdate
+          - event: TreasuryPolicyUpdate
+          - event: SplitterPolicyUpdate
+          - event: ApprovedCreatorUpdate
+      - name: Crate
+        handler: ./src/contracts/crate-contract/handlers.ts
+        abi_file_path: ./abi/crate.json
+        events:
+          - event: ContractCreated
+          - event: SupplyUpdate
+          - event: PriceUpdate
+          - event: RoyaltiesUpdate
+          - event: OwnershipTransferred
+          - event: ListMinted
+          - event: MintListUpdate
+          - event: MintListDeleted
+          - event: TreasuryUpdate
+          - event: FeeUpdate
+          - event: ReferralFeeUpdate
+          - event: Referral
+          - event: Paused
+          - event: Unpaused

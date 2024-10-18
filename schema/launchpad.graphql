@@ -1,0 +1,102 @@
+type CollectionCreated {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  creator_address: String!
+  collection_address: String!
+  salt: String!
+  policy_id: Int!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+}
+
+type TreasuryCreated {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  creator_address: String!
+  collection_address: String!
+  treasury_address: String!
+  policy_id: Int!
+}
+
+type SplitterCreated {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  creator_address: String!
+  collection_address: String!
+  splitter_address: String!
+  policy_id: Int!
+}
+
+type NftPolicyUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  nft_policy_id: Int!
+  config: [String!]
+}
+
+type TreasuryPolicyUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  treasury_policy_id: Int!
+  config: [String!]
+}
+
+type SplitterPolicyUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  splitter_policy_id: Int!
+  config: [String!]
+}
+
+type ApprovedCreatorUpdate {
+  id: ID!
+  chain: String!
+  block_timestamp: Int!
+  block_number: Int!
+  transaction_hash: String!
+  contract_address: String!
+  created_at: Timestamp!
+  updated_at: Timestamp!
+
+  wallet_address: String!
+  status: Boolean!
+}

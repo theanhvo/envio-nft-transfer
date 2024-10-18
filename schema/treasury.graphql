@@ -1,0 +1,9 @@
+type RFVChanged {
+  id: ID!
+  chain: String!
+  blockTimestamp: Int!
+  blockNumber: Int!
+  transactionHash: String!
+  treasuryAddress: String!
+  newRFV: BigInt!
+}
